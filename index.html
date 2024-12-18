@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+    }
+    #container{
+        position: absolute;
+        height: 100px;
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 50px;
+        border: 2px solid red;
+        border-radius: 50px;
+        top: 40%;
+        background-color: #26ff0043;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #hour{
+        height: 80px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+        border-radius: 50px;
+        background-color: rgba(0, 242, 255, 0.227);
+        font-size: 30px;
+    }
+    #minutes{
+        height: 80px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+        border-radius: 50px;
+        background-color: rgba(0, 242, 255, 0.227);
+        font-size: 30px;
+    }
+    #seconds{
+        height: 80px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+        border-radius: 50px;
+        background-color: rgba(0, 242, 255, 0.227);
+        font-size: 30px;
+    }
+    span{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight: 800;
+    }
+    h1{
+        position: absolute;
+        top: 180px;
+        font-family: cursive;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+<body>
+    <h1>DIGITAL CLOCK</h1>
+    <div id="container">
+        <span>HOUR</span>
+    <div id="hour"></div>
+    <span>MINUTES</span>
+    <div id="minutes"></div>
+    <span>SECONDS</span>
+    <div id="seconds"></div>
+    </div>
+
+    <script>
+        let hrs = document.getElementById("hour");
+        let min = document.getElementById("minutes");
+        let sec = document.getElementById("seconds");
+
+        setInterval(() => {
+            let currentTime = new Date();
+        hrs.innerHTML = currentTime.getHours();
+        min.innerHTML = currentTime.getMinutes();
+        sec.innerHTML = currentTime.getSeconds();
+        }, 1000);
+    </script>
+</body>
+</html>
